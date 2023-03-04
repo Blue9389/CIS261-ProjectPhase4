@@ -74,7 +74,6 @@ def Login():
        if UserName == UserList[0]:
             UserRole = UserList[2]  # user is valid, return role
             return UserRole, UserName
-    return UserRole, UserName
 #########################################################################################
 def GetEmpName():
     empname = input("Enter employee name: ")
@@ -104,7 +103,7 @@ def printinfo(DetailsPrinted):
     TotGrossPay = 0.00
     TotTax = 0.00
     TotNetPay = 0.00
-    EmpFile = open("Employees.txt","r")
+    EmpFile = open("Employees.txt", "r")
     while True:
         rundate = input ("Enter start date for report (MM/DD/YYYY) or All for all data in file: ")
         if (rundate.upper() == "ALL"):
@@ -163,11 +162,11 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
-    UserRole, UserName = Login()
+    UserFile = open("Users.txt", "a+")
     print()
     print("##### Data Entry #####")
     ########## Write the line of code to assign UserRole and UserName to the function Login
-     
+    UserRole, UserName = Login()
     DetailsPrinted = False  ###
     EmpTotals = {} ###
     ########## Write the if statement that will check to see if UserRole is equal to NONE (NOTE: code will show red error lines until this line is written)
