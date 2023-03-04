@@ -21,7 +21,7 @@ def CreateUsers():
     # close file to save data
     ########## Write the line of code that will close the file UserFile
         UserFile.close()
-        printinfo()
+        printuserinfo()
 
 def GetUserName():
     ##### write the code to enter the username or End and return username 
